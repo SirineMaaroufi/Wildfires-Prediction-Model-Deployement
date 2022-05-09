@@ -22,7 +22,7 @@ def home():
     pred = model.predictions(inputt)
     print(pred)
    
-    return render_template('After.html')
+    return render_template('After.html', data = pred)
    
 
 
