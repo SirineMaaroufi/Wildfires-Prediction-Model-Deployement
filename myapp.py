@@ -12,13 +12,10 @@ def main():
 
 @app.route('/predict' , methods=["POST"])
 def home():
-    pred = [1]
-    print(pred)
     data1 =request.form["NDVI"]
     data2 =request.form["LST"]
     data3 =request.form["Burned Area"]
     inputt=np.array([[float(data1),float(data2),float(data3)]])
-    print(inputt)
     pred = model.predictions(inputt)
     print(pred)
    
