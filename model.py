@@ -53,6 +53,9 @@ def predictions(inputt):
     fire_classifier = SVC(kernel='rbf',gamma=100, C=1)
     fire_classifier.fit(X_train, y_train)
 
+    
+    #Standardize the input
+    standard_inputt=scaler.transform(inputt)
     prediction=fire_classifier.predict(inputt)
 
     return prediction
